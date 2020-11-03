@@ -1,7 +1,7 @@
 //to combine reducers
 import { combineReducers } from 'redux';
-import loginReducer from './Reducers/loginReducer.js';
-import chatRoomReducer from './Reducers/chatRoomReducer.js';
+import loginReducer from './loginReducer';
+import chatRoomReducer from './chatRoomReducer';
 
 // combine reducers
 const reducers = combineReducers({

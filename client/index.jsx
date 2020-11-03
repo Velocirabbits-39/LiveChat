@@ -2,15 +2,16 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from 'react-dom';
-import App from './App.jsx';
+// import App from './App.jsx';
 import './styles/index.css';
 import { Provider } from 'react-redux';
 import store from './store';
+import Wrapper from './Containers/mainContainer.jsx'
 
 render(
   <Provider store={store}>
     <Router>
-      <App />
+      <Wrapper />
     </Router>
   </Provider>,
   document.getElementById('root'),

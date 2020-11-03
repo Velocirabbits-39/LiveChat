@@ -1,9 +1,11 @@
 import React from 'react';
 import { Route, useHistory } from 'react-router-dom';
-import Login from './components/Login.jsx';
-import SignUp from './components/SignUp.jsx';
-import Main from './components/Main.jsx';
+// import Login from './components/Login.jsx';
+// import SignUp from './components/SignUp.jsx';
+// import Main from './components/Main.jsx';
 
+//redux version
+import Wrapper from './containers/MainContainer.jsx';
 class App extends React.Component {
   // when the component first mounts,
   // send a fetch request to the back end
@@ -28,19 +30,25 @@ class App extends React.Component {
   //   })
   // }
 
+  //what the react was rendering out 
+
+  // <div >
+  //   <Route exact path='/'>
+  //     <Main />
+  //   </Route>
+  //   <Route exact path='/login' >
+  //     <Login />
+  //   </Route>
+  //   <Route path='/signup'>
+  //     <SignUp />
+  //   </Route>
+  // </div>
   render() {
     return (
-      <div >
-        <Route exact path='/'>
-          <Main />
-        </Route>
-        <Route exact path='/login' >
-          <Login />
-        </Route>
-        <Route path='/signup'>
-          <SignUp />
-        </Route>
-      </div>``
+      <div>
+        <Wrapper />
+      </div>
+
     )
   }
 }
